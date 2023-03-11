@@ -7,10 +7,10 @@ const itemFilter = document.getElementById('filter');
 function addItem(e) {
 	e.preventDefault();
 
-	const newItem = itemInput.value;
+	const newItem = itemInput.value.trim();
 
 	// Validate input
-	if (newItem.value === '') {
+	if (newItem === '') {
 		alert('Add an item');
 		return;
 	}
@@ -28,6 +28,7 @@ function addItem(e) {
 	checkUI();
 
 	itemInput.value = '';
+
 }
 
 function createButton(classes) {
